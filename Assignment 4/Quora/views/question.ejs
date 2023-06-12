@@ -1,0 +1,23 @@
+<h5>Question:</h5>
+<h8>By: <%= record.userName %></h8>
+<h6><%= record.text %></h6>
+
+<div >
+    <h6>Answers:</h6>
+    <% for( let index = 0; index < answers.length; index++ ) { %>
+        <div><%= answers[index].text %></div>
+        <hr />
+    <% } %>   
+</div>
+
+<form action="" method="post" class="mt-5">
+    <h5>Post An Answer</h5>
+    <div class="row">
+            <div class="col-8">
+                <input class="form-control" type="text" id="text" name="text" value="" placeholder="Enter your Answer here.."/>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-dark" type="submit">Post</button>
+            </div>
+    </div>
+</form>
